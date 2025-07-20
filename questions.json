@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What is the largest planet in our Solar System?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Jupiter",
+      "Saturn"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the main source of heat and light on Earth?",
+    "options": [
+      "Moon",
+      "Sun",
+      "Volcanoes",
+      "Clouds"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Sun from Earth seems to move from ________.",
+    "options": [
+      "West to east",
+      "East to west",
+      "North to south",
+      "South to north"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which part of the Earth receives the most direct sunlight year-round?",
+    "options": [
+      "Poles",
+      "Equator",
+      "Tropic of Cancer",
+      "Antarctic Circle"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What effect causes splitting of spectral lines in a magnetic field?",
+    "options": [
+      "Doppler effect",
+      "Zeeman effect",
+      "Parallax",
+      "Dispersion"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What type of waves does Doppler effect apply to?",
+    "options": [
+      "Sound and light",
+      "Only sound",
+      "Only light",
+      "Water waves"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which layer helps in radio communication?",
+    "options": [
+      "Exosphere",
+      "Mesosphere",
+      "Thermosphere",
+      "Stratosphere"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Spectral analysis can help find which star property?",
+    "options": [
+      "Chemical elements",
+      "Distance",
+      "Age",
+      "Size"
+    ],
+    "answer": 0
+  }
+]
