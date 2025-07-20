@@ -1,0 +1,9 @@
+{
+  "short_name":"Quiz",
+  "name":"Space Quiz",
+  "icons":[{"src":"icons/icon-192.png","sizes":"192x192","type":"image/png"}],
+  "start_url":"index.html?range=1-100",
+  "display":"standalone",
+  "background_color":"#000",
+  "theme_color":"#0ff"
+}
