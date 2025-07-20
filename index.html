@@ -7,12 +7,38 @@
   <meta name="theme-color" content="#000">
   <title>Space Quiz</title>
   <style>
-    body { margin:0; padding:1rem; font-family: 'Orbitron', sans-serif; background: #000 url('https://www.publicdomainpictures.net/pictures/30000/velka/starfield-background.jpg') no-repeat center/cover; color:#0ff; }
-    #timer { font-size:1.5rem; text-align:center; margin-bottom:1rem; }
-    #question { font-size:1.25rem; margin-bottom:1rem; }
-    .options { list-style:none; padding:0; }
-    .options li { margin:0.5rem 0; }
-    button { padding:0.75rem 1.5rem; font-size:1rem; margin:0.5rem; background:#222; color:#0ff; border:none; border-radius:8px; }
+    body {
+      margin: 0;
+      padding: 1rem;
+      font-family: 'Orbitron', sans-serif;
+      background: #000 url('https://www.publicdomainpictures.net/pictures/30000/velka/starfield-background.jpg') no-repeat center/cover;
+      color: #0ff;
+    }
+    #timer {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    #question {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .options {
+      list-style: none;
+      padding: 0;
+    }
+    .options li {
+      margin: 0.5rem 0;
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      margin: 0.5rem;
+      background: #222;
+      color: #0ff;
+      border: none;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -20,35 +46,78 @@
   <div id="quiz-container"></div>
   <button id="prev" disabled>Previous</button>
   <button id="next">Next</button>
+
   <script>
+    // Helpers
+    let questions = [];
+    let current = 0;
+    let answers = [];
+    function shuffle(arr) {
+      return arr.sort(() => Math.random() - 0.5);
+    }
+
+    // Load full list and pick 30 random
     fetch('questions.json')
       .then(res => res.json())
       .then(all => {
-        const subset = all.slice(start-1, end);
-        if (subset.length < 30) { alert(`Only ${subset.length} questions available.`); return; }
-        questions = shuffle(subset).slice(0,30);
+        if (all.length < 30) {
+          alert(`Only ${all.length} questions available.`);
+          return;
+        }
+        questions = shuffle(all).slice(0, 30);
         renderQuestion(0);
         startTimer();
-      });
-    const params = new URLSearchParams(location.search);
-    const [start,end] = params.get('range').split('-').map(Number);
-    let questions = [], current = 0, answers = [];
-    function shuffle(a){return a.sort(()=>Math.random()-0.5)}
-    function renderQuestion(i){
-      current=i; const q=questions[i];
-      document.getElementById('quiz-container').innerHTML=
-        `<div id="question">${i+1}. ${q.question}</div>`+
-        `<ul class="options">${q.options.map((o,j)=
-          `<li><label><input name="opt" type="radio" value="${j}" ${answers[i]===j?'checked':''}>${['A','B','C','D'][j]}. ${o}</label></li>`
+      })
+      .catch(err => console.error('Failed to load questions:', err));
+
+    function renderQuestion(i) {
+      current = i;
+      const q = questions[i];
+      document.getElementById('quiz-container').innerHTML =
+        `<div id="question">${i + 1}. ${q.question}</div>` +
+        `<ul class="options">${q.options.map((opt, j) =>
+          `<li><label><input name="opt" type="radio" value="${j}" ${answers[i] === j ? 'checked' : ''}> ${['A','B','C','D'][j]}. ${opt}</label></li>`
         ).join('')}</ul>`;
-      document.getElementById('prev').disabled=i===0;
-      document.getElementById('next').textContent=i===29?'Submit':'Next';
+      document.getElementById('prev').disabled = i === 0;
+      document.getElementById('next').textContent = i === 29 ? 'Submit' : 'Next';
     }
-    document.getElementById('prev').onclick=_=>{saveAnswer();renderQuestion(current-1)};
-    document.getElementById('next').onclick=_=>{saveAnswer();current<29?renderQuestion(current+1):grade()};
-    function saveAnswer(){const s=document.querySelector('input[name="opt"]:checked');answers[current]=s?+s.value:null}
-    function grade(){saveAnswer();let s=0;questions.forEach((q,i)=>{if(answers[i]===q.answer)s++});alert(`Your score: ${s}/30`)}
-    function startTimer(){let t=600;const tv=document.getElementById('timer'),iv=setInterval(()=>{t--;const m=Math.floor(t/60),s=t%60;tv.textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;if(t<=0){clearInterval(iv);grade()}},1000)}
+
+    document.getElementById('prev').onclick = () => {
+      saveAnswer();
+      renderQuestion(current - 1);
+    };
+    document.getElementById('next').onclick = () => {
+      saveAnswer();
+      if (current < 29) renderQuestion(current + 1);
+      else grade();
+    };
+
+    function saveAnswer() {
+      const sel = document.querySelector('input[name="opt"]:checked');
+      answers[current] = sel ? Number(sel.value) : null;
+    }
+
+    function grade() {
+      saveAnswer();
+      let score = 0;
+      questions.forEach((q, i) => { if (answers[i] === q.answer) score++; });
+      alert(`Your score: ${score}/30`);
+    }
+
+    // Timer
+    function startTimer() {
+      let t = 600;
+      const tv = document.getElementById('timer');
+      const iv = setInterval(() => {
+        t--;
+        const m = Math.floor(t / 60), s = t % 60;
+        tv.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        if (t <= 0) {
+          clearInterval(iv);
+          grade();
+        }
+      }, 1000);
+    }
   </script>
 </body>
 </html>
