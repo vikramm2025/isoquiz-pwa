@@ -1,82 +1,152 @@
 [
   {
-    "question": "What is the largest planet in our Solar System?",
-    "options": [
-      "Earth",
-      "Mars",
-      "Jupiter",
-      "Saturn"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the main source of heat and light on Earth?",
-    "options": [
-      "Moon",
-      "Sun",
-      "Volcanoes",
-      "Clouds"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "The Sun from Earth seems to move from ________.",
-    "options": [
-      "West to east",
-      "East to west",
-      "North to south",
-      "South to north"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which part of the Earth receives the most direct sunlight year-round?",
-    "options": [
-      "Poles",
-      "Equator",
-      "Tropic of Cancer",
-      "Antarctic Circle"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What effect causes splitting of spectral lines in a magnetic field?",
-    "options": [
-      "Doppler effect",
-      "Zeeman effect",
-      "Parallax",
-      "Dispersion"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What type of waves does Doppler effect apply to?",
-    "options": [
-      "Sound and light",
-      "Only sound",
-      "Only light",
-      "Water waves"
-    ],
+    "question": "Sample question 1?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
     "answer": 0
   },
   {
-    "question": "Which layer helps in radio communication?",
-    "options": [
-      "Exosphere",
-      "Mesosphere",
-      "Thermosphere",
-      "Stratosphere"
-    ],
+    "question": "Sample question 2?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 1
+  },
+  {
+    "question": "Sample question 3?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
     "answer": 2
   },
   {
-    "question": "Spectral analysis can help find which star property?",
-    "options": [
-      "Chemical elements",
-      "Distance",
-      "Age",
-      "Size"
-    ],
+    "question": "Sample question 4?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 3
+  },
+  {
+    "question": "Sample question 5?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
     "answer": 0
+  },
+  {
+    "question": "Sample question 6?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 1
+  },
+  {
+    "question": "Sample question 7?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 2
+  },
+  {
+    "question": "Sample question 8?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 3
+  },
+  {
+    "question": "Sample question 9?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 0
+  },
+  {
+    "question": "Sample question 10?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 1
+  },
+  {
+    "question": "Sample question 11?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 2
+  },
+  {
+    "question": "Sample question 12?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 3
+  },
+  {
+    "question": "Sample question 13?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 0
+  },
+  {
+    "question": "Sample question 14?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 1
+  },
+  {
+    "question": "Sample question 15?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 2
+  },
+  {
+    "question": "Sample question 16?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 3
+  },
+  {
+    "question": "Sample question 17?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 0
+  },
+  {
+    "question": "Sample question 18?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 1
+  },
+  {
+    "question": "Sample question 19?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 2
+  },
+  {
+    "question": "Sample question 20?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 3
+  },
+  {
+    "question": "Sample question 21?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 0
+  },
+  {
+    "question": "Sample question 22?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 1
+  },
+  {
+    "question": "Sample question 23?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 2
+  },
+  {
+    "question": "Sample question 24?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 3
+  },
+  {
+    "question": "Sample question 25?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 0
+  },
+  {
+    "question": "Sample question 26?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 1
+  },
+  {
+    "question": "Sample question 27?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 2
+  },
+  {
+    "question": "Sample question 28?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 3
+  },
+  {
+    "question": "Sample question 29?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 0
+  },
+  {
+    "question": "Sample question 30?",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 1
   }
 ]
